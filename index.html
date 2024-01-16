@@ -1,0 +1,447 @@
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     <title>CodePich</title>
+</head>
+
+<body>
+     <header class="bg-gray-100 py-4 px-2">
+          <div class="container mx-auto flex justify-between">
+               <div class="flex items-center space-x-4">
+                    <span class="text-2xl">CodePich</span>
+                    <i onclick="menuHandler()" class="menu__icon bi bi-list text-3xl cursor-pointer"></i>
+                    <input
+                         class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-72"
+                         placeholder="Search products &amp; brands" />
+               </div>
+               <div class="flex items-center space-x-4">
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-transparent hover:bg-gray-700 hover:text-white">
+                         Download App
+                    </button>
+                    <a class="hover:underline" href="#">
+                         Sign Up
+                    </a>
+                    <span>/</span>
+                    <a class="hover:underline" href="#">
+                         Login
+                    </a>
+               </div>
+          </div>
+          <!--sidebar menu-->
+          <div
+               class="sidebar__menu z-10 hidden fixed top-0 left-0 bottom-0 w-[280px] h-full border-r bg-gray-900 overflow-y-auto text-white">
+               <nav class="flex flex-col gap-6 p-4">
+                    <div class="flex justify-between items-center">
+                         <h2 class="text-lg font-semibold">Categories</h2>
+                         <i onclick="menuHandler()" class="bi bi-x-lg cursor-pointer"></i>
+                    </div>
+
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full text-left"
+                         type="button" id="radix-:R5rnnnla:" aria-haspopup="menu" aria-expanded="false"
+                         data-state="closed">
+                         Clothing
+                    </button>
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full text-left"
+                         type="button" id="radix-:R7rnnnla:" aria-haspopup="menu" aria-expanded="false"
+                         data-state="closed">
+                         Shoes
+                    </button>
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full text-left"
+                         type="button" id="radix-:R9rnnnla:" aria-haspopup="menu" aria-expanded="false"
+                         data-state="closed">
+                         Accessories
+                    </button>
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full text-left"
+                         type="button" id="radix-:Rbrnnnla:" aria-haspopup="menu" aria-expanded="false"
+                         data-state="closed">
+                         Electronics
+                    </button>
+                    <button
+                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full text-left"
+                         type="button" id="radix-:Rdrnnnla:" aria-haspopup="menu" aria-expanded="false"
+                         data-state="closed">
+                         Home &amp; Garden
+                    </button>
+                    <h2 class="text-lg font-semibold mt-4">Sale</h2>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         Summer Sale
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         Clearance
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         Last Chance
+                    </a>
+                    <h2 class="text-lg font-semibold mt-4">My Account</h2>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         Login
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         Register
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                         rel="ugc">
+                         My Orders
+                    </a>
+               </nav>
+          </div>
+     </header>
+     <section>
+          <div class="swiper mySwiper">
+               <div class="swiper-wrapper h-2/4">
+                    <div class="swiper-slide flex flex-col justify-center items-center">
+                         <div class="bg-gray-700 text-white p-2 rounded-lg">
+                              <h2 class="text-2xl">Product Name</h2>
+                              <p class="my-1.5">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                   incididunt
+                                   ut labore et dolore magna aliqua. <br>
+                                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                              </p>
+                              <button class="text-gray-900 bg-white rounded-lg p-1 hover:bg-gray-100">
+                                   Buy Now
+                              </button>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                    </div>
+               </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+          </div>
+     </section>
+     <section id="popular">
+          <p class="text-gray-600 text-2xl py-2 px-8">Popular Products</p>
+          <div class="swiper popular__products h-fit">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh] rounded-lg">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh] rounded-lg">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+     <section id="featured">
+          <p class="text-gray-600 text-2xl py-2 px-8">Featured Products</p>
+          <div class="swiper popular__products h-fit">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh] rounded-lg">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh] rounded-lg">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+                    <div class="swiper-slide rounded p-2 border h-fit rounded-lg flex flex-col gap-1">
+                         <img src="https://picsum.photos/200/300" alt="product-img" class="h-[20vh]">
+                         <h2 class="text-2xl">Product Name</h2>
+                         <p class="text-gray-500">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                              incididunt.
+                         </p>
+                         <div class="flex gap-4">
+                              <span class="rating">
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-fill"></i>
+                                   <i class="bi bi-star-half"></i>
+                                   <i class="bi bi-star"></i>
+                              </span>
+                              <span class="flex items-center">
+                                   <i class="bi bi-tag"></i>
+                                   24,900
+                              </span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="./app.js"></script>
+</body>
+
+</html>
