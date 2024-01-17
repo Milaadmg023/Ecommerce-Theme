@@ -40,10 +40,6 @@ var swiper = new Swiper(".popular__products", {
      slidesPerView: slidersNum,
      spaceBetween: 30,
      loop: true,
-     navigation: {
-       nextEl: ".swiper-button-next",
-       prevEl: ".swiper-button-prev",
-     },
    });
 
    var swiper = new Swiper(".day__deals", {
