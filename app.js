@@ -4,7 +4,7 @@ function menuHandler() {
   menu.classList.toggle("hidden");
 }
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".banner", {
   effect: "coverflow",
   loop: true,
   grabCursor: true,
@@ -40,3 +40,12 @@ var swiper = new Swiper(".popular__products", {
        prevEl: ".swiper-button-prev",
      },
    });
+
+   var swiper = new Swiper(".day__deals", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
