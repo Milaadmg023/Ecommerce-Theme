@@ -10,8 +10,9 @@
      <title>CodePich</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
      <header class="bg-gray-100 py-4 px-2">
+          <!--Desktop menu-->
           <div class="container mx-auto flex justify-between">
                <div class="flex items-center space-x-4">
                     <span class="text-2xl">CodePich</span>
@@ -25,13 +26,16 @@
                          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-transparent hover:bg-gray-700 hover:text-white">
                          Download App
                     </button>
-                    <a class="hover:underline" href="#">
-                         Sign Up
-                    </a>
-                    <span>/</span>
-                    <a class="hover:underline" href="#">
-                         Login
-                    </a>
+                    <div class="hidden md:block">
+                         <a class="hover:underline" href="#">
+                              Sign Up
+                         </a>
+                         <span>/</span>
+                         <a class="hover:underline" href="#">
+                              Login
+                         </a>
+                    </div>
+
                </div>
           </div>
           <!--sidebar menu-->
@@ -87,13 +91,13 @@
                          Last Chance
                     </a>
                     <h2 class="text-lg font-semibold mt-4">My Account</h2>
-                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 md:hidden" href="#"
                          rel="ugc">
                          Login
                     </a>
-                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
+                    <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 md:hidden" href="#"
                          rel="ugc">
-                         Register
+                         Sign Up
                     </a>
                     <a class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#"
                          rel="ugc">
@@ -440,31 +444,37 @@
           </div>
      </section>
      <section id="deals"
-          class="flex bg-[url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3drNjIyMDM4MjgtaW1hZ2Uta3A2Ym1jYmIuanBn.jpg')] bg-cover h-[40vh] mt-8">
-          <div class="text-white w-1/4">
-               <h2>
+          class="flex bg-[url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3drNjIyMDM4MjgtaW1hZ2Uta3A2Ym1jYmIuanBn.jpg')] bg-cover h-[50vh] my-8">
+          <div class="text-white w-1/4 flex flex-col justify-center items-center gap-1">
+               <h2 class="text-6xl">
                     Deals of <br>
                     the Day
                </h2>
-               <span>08:32:29</span>
+               <p class="text-xl">08:32:29</p>
           </div>
-          <div class="overflow-x-hidden bg-gray-600 w-3/4 m-1">
+          <div class="overflow-x-hidden bg-none w-3/4 m-1">
                <div class="swiper day__deals">
                     <div class="swiper-wrapper">
                          <div class="swiper-slide bg-white rounded-lg">Slide 1</div>
-                         <div class="swiper-slide">Slide 2</div>
-                         <div class="swiper-slide">Slide 3</div>
-                         <div class="swiper-slide">Slide 4</div>
-                         <div class="swiper-slide">Slide 5</div>
-                         <div class="swiper-slide">Slide 6</div>
-                         <div class="swiper-slide">Slide 7</div>
-                         <div class="swiper-slide">Slide 8</div>
-                         <div class="swiper-slide">Slide 9</div>
+                         <div class="swiper-slide bg-white rounded-lg">Slide 2</div>
+                         <div class="swiper-slide bg-white rounded-lg">Slide 3</div>
+                         <div class="swiper-slide bg-white rounded-lg">Slide 4</div>
+                         <div class="swiper-slide bg-white rounded-lg">Slide 5</div>
+                         <div class="swiper-slide bg-white rounded-lg">Slide 6</div>
                     </div>
-                    <div class="swiper-button-prev bg-white rounded-full p-6 text-gray-900 shadow-xl border"></div>
-                    <div class="swiper-button-next bg-white rounded-full p-6 text-gray-900 shadow-xl border"></div>
+                    <div class="swiper-button-prev bg-white rounded-full p-7 text-gray-900 shadow-xl border"></div>
+                    <div class="swiper-button-next bg-white rounded-full p-7 text-gray-900 shadow-xl border"></div>
                </div>
           </div>
+     </section>
+     <section id="products">
+          <div class="bg-gray-700">
+               <img src="https://brandslogos.com/wp-content/uploads/images/large/xbox-logo.png" alt="">
+               <h3>Gaming Console</h3>
+
+          </div>
+          <div></div>
+          <div></div>
      </section>
 
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

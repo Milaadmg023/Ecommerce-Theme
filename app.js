@@ -1,4 +1,13 @@
 let menu = document.querySelector(".sidebar__menu");
+let width=window.innerWidth
+let slidersNum = 2
+if (width >= 1024) {
+    slidersNum = 5
+} else if (width>=768){
+  slidersNum = 3
+}else if (width>=512){
+  slidersNum = 2
+}
 
 function menuHandler() {
   menu.classList.toggle("hidden");
@@ -28,13 +37,9 @@ var swiper = new Swiper(".banner", {
 });
 
 var swiper = new Swiper(".popular__products", {
-     slidesPerView: 5,
+     slidesPerView: slidersNum,
      spaceBetween: 30,
      loop: true,
-     autoplay: {
-       delay: 2500,
-       disableOnInteraction: false,
-     },
      navigation: {
        nextEl: ".swiper-button-next",
        prevEl: ".swiper-button-prev",
@@ -42,10 +47,15 @@ var swiper = new Swiper(".popular__products", {
    });
 
    var swiper = new Swiper(".day__deals", {
-    slidesPerView: 3,
+    slidesPerView: slidersNum-0.8,
     spaceBetween: 30,
+    loop:true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
